@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.zip
+kaggle.json
+access_token
+scripts/torchprobe/temisu/

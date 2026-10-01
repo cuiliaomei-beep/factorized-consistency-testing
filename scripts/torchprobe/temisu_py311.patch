@@ -1,0 +1,13 @@
+diff --git a/temisu/mutator.py b/temisu/mutator.py
+index 1509265..b98763e 100644
+--- a/temisu/mutator.py
++++ b/temisu/mutator.py
+@@ -43,7 +43,7 @@ def _scalarize(k:str, v:torch.Tensor):
+     return k, v
+ 
+ def _generate_true_condition(tensor_map):
+-    (k1, v1), (k2, v2) = random.sample(tensor_map.items(), 2)
++    (k1, v1), (k2, v2) = random.sample(list(tensor_map.items()), 2)  # P11 patch: Python>=3.11 needs a sequence
+ 
+     k1, v1 = _scalarize(k1, v1)
+     k2, v2 = _scalarize(k2, v2)
